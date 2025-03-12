@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]CANTEK MEAT TECHNOLOGIES</title>
+    <link rel="icon" href="~/images/Logo Cantek.png" type="image/x-icon" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <header>
+
+       
+            <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/Home/Index">
+                        <img src="/images/Cantek Yazı logo.png" alt="Logo">
+                    </a>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between w-100">
+                        <ul class="navbar-nav flex-grow-1">
+                            <!-- Navigation Links -->
+                        </ul>
+
+                        <!-- Language Selection Buttons -->
+                        <div class="language-selection-container">
+                            
+                            <form method="post" action="@Url.Action("ChangeLanguage", "Home")">
+                                <button type="submit" name="lang" value="tr" class="btn btn-language">
+                                    <img src="~/images/TR.png" alt="TR"> Türkçe
+                                </button>
+
+                                <button type="submit" name="lang" value="en" class="btn btn-language">
+                                    <img src="~/images/En.png" alt="EN"> English
+                                </button>
+                            </form>
+
+                               
+                           
+                        </div>
+                    </div>
+                </div>
+            </nav>
+       
+
+
+
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="footer text-muted bg-light py-3">
+        <div class="containerfooter">
+            &copy; Copyright 2025.Tüm Hakları Saklıdır. <a asp-area="" asp-controller="#" asp-action="#"> </a>
+        </div>
+    </footer>
+
+   
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

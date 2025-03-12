@@ -1,0 +1,238 @@
+.button-container, .left-buttons, button, h6 {
+    font-weight: 700;
+}
+
+    .btn-language:hover, button:hover {
+        background-color: #373737;
+    }
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+    .navbar-brand img {
+        height: 60px;
+        width: auto;
+    }
+button, .btn {
+    padding: 50px 190px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .3s, transform .2s;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Yazýnýn tek satýrda kalmasýný saðlar */
+    overflow: hidden; /* Taþan yazýyý gizler */
+    text-overflow: ellipsis; /* Uzun yazýlar için '...' ekler */
+}
+
+    /* Yazý boyutunu dinamik olarak ayarla */
+    button span {
+        font-size: calc(12px + 0.3vw); /* Ekran boyutuna göre ayarlanýr */
+        max-width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+
+    button:hover, .btn:hover {
+        background-color: #373737;
+        transform: scale(1.05);
+    }
+
+.button-container {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.left-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 11px;
+    width: 40%;
+    margin-top: 5px;
+    margin-left: 200px;
+}
+
+    .left-buttons button {
+        width: 100%;
+        max-width: 250px; /* Buton geniþliði artýrýldý */
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+/* Sað taraf içeriði */
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 50px;
+    width: 20%;
+    position: absolute;
+    right: 120px;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+    .right-container button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+/* Footer */
+.containerfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+h6 {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 105px;
+}
+
+@media (max-width: 768px) {
+    .left-buttons {
+        width: 70%;
+    }
+
+        .left-buttons button, .right-container button {
+            width: 100%;
+            max-width: 100%;
+            padding: 16px 30px;
+            font-size: 16px;
+        }
+
+    .right-container {
+        position: relative;
+        top: auto;
+        transform: none;
+        padding-top: 20px;
+        text-align: right;
+        width: 70%;
+    }
+}
+
+/* Dil seçme butonlarý */
+.language-selection-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .language-selection-container form {
+        display: flex;
+    }
+
+    .language-selection-container button {
+        position: relative;
+        z-index: 10;
+    }
+
+.btn-language {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    margin: 0 5px;
+}
+
+    .btn-language img {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+    }
+
+    .btn-language:hover {
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+/* Read Data butonu */
+/*.btn-custom {
+    padding: 30px 80px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color .3s, transform .2s;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    font-weight: 700;
+    position: absolute;
+    right: 20px;
+    top: 25%;
+}
+
+    .btn-custom:hover {
+        background-color: #373737;
+        transform: scale(1.05);
+    }*/
+
+/* Veri Gösterimi */
+.VeriMetni {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:120px;
+}
+
+hr {
+    width: 200px;
+}

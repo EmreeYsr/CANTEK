@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "EN-";
+}
+
+<div class="button-container">
+    <div class="left-buttons">
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(0)">OPEN THE ENTRANCE DOOR</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(1)">CLOSE THE ENTRANCE DOOR</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(2)">OPEN SIDE COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(3)">CLOSE SIDE COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(4)">OPEN THE TAILGATE</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(5)">TAIL COVER CLOSE</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(6)">OPEN TAIL COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(7)">TURN OFF TAIL COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(8)">OPEN THE BACKREST</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw5Komut(9)">CLOSE THE BACKREST</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(0)">OPEN NECK COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(1)">CLOSE NECK COMPRESSION</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(2)">HEAD LIFT OPEN</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(3)">CLOSE HEAD LIFT</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(4)">CABIN FORWARD</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(5)">BACK TO THE CABIN</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(6)">UNLOAD THE ANIMAL FROM INSIDE THE CABIN</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(7)">EXIT COVER CLOSE</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(8)">QX8 </button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(9)">QX9 </button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(10)">QX10</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(11)">QX11 </button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(12)">QX12 </button>
+       
+        
+
+    </div>
+
+    <div class="right-container">
+        <br />
+        <div class="VeriMetni">
+
+            <p>MW5: <span id="mw5data">Loading...</span></p>
+            <p>MW6: <span id="mw6data">Loading...</span></p>
+            <hr />
+        </div>
+
+        <br />
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(13)">RESET</button>
+        <br />
+        <h6>LOCK MECHANISM</h6>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(14)">EXIT LOCK CLOSE</button>
+        <button type="button" class="btn btn-secondary btn-lg btn-block" onclick="mw6Komut(15)">EXIT UNLOCK</button>
+    </div>
+
+    <script>
+        // Sayfa yüklendikten sonra her 5 saniyede bir veriyi oku
+        setInterval(function () {
+            fetch('/PLC/Okuma')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById("mw5data").innerText = data.mw5;
+                        document.getElementById("mw6data").innerText = data.mw6;
+                    } else {
+                        console.error(data.message);
+                    }
+                })
+                .catch(error => console.error("Hata:", error));
+        }, 1000); // 5000 ms = 5 saniye arayla
+    </script>
+</div>
