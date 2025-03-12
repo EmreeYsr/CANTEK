@@ -6,7 +6,6 @@
 function mw5Komut(bitIndex) {
     let durum = butonDurum.mw5[bitIndex] || false;
     let komut = durum ? 'kapat' : 'ac';
-
     butonDurum.mw5[bitIndex] = !durum;
 
     fetch(`/PLC/MW5BitAyarla?bitIndex=${bitIndex}&komut=${komut}`)
@@ -35,11 +34,6 @@ function mw6Komut(bitIndex) {
         .then(data => {
             if (data.success) {
                 updateStatusText(`MW6 Bit ${bitIndex} ${komut.toUpperCase()} oldu!`);
-
-
-
-
-
                 updateWord();  // Word dosyasını güncelle
             } else {
                 updateStatusText(`Hata: ${data.message}`);
