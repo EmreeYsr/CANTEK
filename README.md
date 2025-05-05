@@ -38,7 +38,7 @@ Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir PLC yönetim sistemidir. 
    - `EasyModbusCore`
 6. Projeyi çalıştırın (`Ctrl + F5`).
 
-## Gereksinimler
+##  Gereksinimler
 
 - Visual Studio 2019 veya üzeri
 - .NET Framework (MVC uyumlu sürüm)
