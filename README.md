@@ -1,4 +1,4 @@
-# WebApplication1 - ASP.NET MVC Kullanıcı Yönetim Sistemi
+# WebApplication1 - ASP.NET MVC PLC Yönetim Sistemi
 
 Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir kullanıcı yönetim sistemidir. Projede kullanıcı girişi, rol tabanlı erişim kontrolü ve sayfa yönlendirme gibi temel işlevler bulunmaktadır. Veritabanı olarak SQLite kullanılmaktadır.
 
