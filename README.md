@@ -35,7 +35,7 @@ Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir PLC yönetim sistemidir. 
 4. `web.config` içindeki bağlantı cümlesini SQLite'a göre yapılandırın.
 5. Gerekli NuGet paketlerini yükleyin:
    - `System.Data.SQLite`
-   - `EasyModbusTCP.NET`
+   - `EasyModbusCore`
 6. Projeyi çalıştırın (`Ctrl + F5`).
 
 ## Gereksinimler
@@ -44,7 +44,7 @@ Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir PLC yönetim sistemidir. 
 - .NET Framework (MVC uyumlu sürüm)
 - NuGet Paketleri:
   - System.Data.SQLite
-  - EasyModbusTCP.NET
+  - EasyModbusCore
 
 ## Geliştirici
 
