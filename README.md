@@ -27,7 +27,7 @@ Bu proje, ASP.NET MVC mimarisi ile geliştirilmiş bir PLC yönetim sistemidir. 
 1. Bu projeyi klonlayın:
 
    ```bash
-   git clone https://github.com/kullaniciAdi/WebApplication1.git
+   git clone https://github.com/EmreeYsr/WebApplication1.git
    ```
 
 2. Projeyi Visual Studio ile açın.
